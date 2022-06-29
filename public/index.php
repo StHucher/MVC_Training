@@ -11,10 +11,11 @@ $router->map('GET', '/about', 'MainController::about');
 $router->map('GET', '/about/autor', 'MainController::aboutMe');
 
 $match = $router->match();
+/* var_dump($match); */
 
 if($match){
 
-  $match['target'] = $action;
+  $action = $match['target'];
 
   $pieces = explode("::", $action);
 

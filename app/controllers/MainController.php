@@ -22,7 +22,8 @@ class MainController {
   private function show($viewName, $viewVars=[]){
 
     $baseUrl = dirname($_SERVER['SCRIPT_NAME']);
-
+    require __DIR__."/../views/header.part.php";
     require __DIR__."/../views/$viewName.tpl.php";
+    require __DIR__."/../views/footer.part.php";
   }
 }
